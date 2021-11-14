@@ -1,10 +1,16 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <Home msg="Welcome to Your Vue.js App"/>
-  </div>
+<div>
+
+</div>
 </template>
 
 <script>
 
+export default {
+components: {}
+}
 </script>
+
+<style>
+
+</style>

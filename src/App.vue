@@ -9,7 +9,9 @@
     >
       <router-view class="container"/>
     </b-container>
-    <router-view v-else/>
+    <b-container v-else>
+    <router-view/>
+    </b-container>
     <Footer/>
 
   </div>

@@ -1,7 +1,6 @@
 # Gauntlet Designs
 
 [![Status](https://img.shields.io/badge/Status-Live-brightgreen)](https://gauntletdesigns.com)
-[![GitHub commit activity](https://img.shields.io/github/commit-activity/m/aftongauntlett/gauntlet-designs-vue)](https://github.com/aftongauntlett/gauntlet-designs-vue/commits/main)
 [![License](https://img.shields.io/badge/License-MIT-blue)](https://opensource.org/licenses/MIT)
 
 A clean farewell page for a closed business. Built to be fast, accessible, and easy to maintain.

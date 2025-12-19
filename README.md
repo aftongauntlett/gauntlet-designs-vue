@@ -1,8 +1,5 @@
 # Gauntlet Designs
 
-[![Status](https://img.shields.io/badge/Status-Live-brightgreen)](https://gauntletdesigns.com)
-[![License](https://img.shields.io/badge/License-MIT-blue)](https://opensource.org/licenses/MIT)
-
 A clean farewell page for a closed business. Built to be fast, accessible, and easy to maintain.
 
 This project includes:

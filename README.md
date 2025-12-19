@@ -1,146 +1,64 @@
-# Gauntlet Designs - Farewell Website
+# Gauntlet Designs
 
-[![Deploy Status](https://img.shields.io/badge/deploy-manual-blue)](https://github.com/aftongauntlett/gauntlet-designs-vue)
-[![CI/CD Pipeline](https://img.shields.io/badge/pipeline-ready-success?logo=github-actions)](https://github.com/aftongauntlett/gauntlet-designs-vue/actions)
-[![Vercel](https://img.shields.io/badge/deployed%20on-Vercel-black?logo=vercel)](https://gauntletdesigns.com)
-[![Commit Activity](https://img.shields.io/github/commit-activity/m/aftongauntlett/gauntlet-designs-vue?logo=git)](https://github.com/aftongauntlett/gauntlet-designs-vue/commits)
-[![Live Site](https://img.shields.io/badge/live%20site-gauntletdesigns.com-blue?logo=web)](https://gauntletdesigns.com)
+[![Status](https://img.shields.io/badge/Status-Live-brightgreen)](https://gauntletdesigns.com)
+[![GitHub commit activity](https://img.shields.io/github/commit-activity/m/aftongauntlett/gauntlet-designs-vue)](https://github.com/aftongauntlett/gauntlet-designs-vue/commits/main)
+[![License](https://img.shields.io/badge/License-MIT-blue)](https://opensource.org/licenses/MIT)
 
-A clean, modern, accessible farewell website built with Vue 3, Vite, and Tailwind CSS to serve as a graceful closure for the Gauntlet Designs business.
+A clean farewell page for a closed business. Built to be fast, accessible, and easy to maintain.
 
-## Project Goals
+This project includes:
 
-This project serves as a professional closure page that:
+- a custom theme system with light/dark mode
+- reusable Vue 3 components with composition API
+- accessible UI with semantic HTML and ARIA labels
+- SEO optimization with sitemap and robots.txt
+- custom deployment workflow syncing dev to production repos
 
-- Thanks past clients and acknowledges the business journey
-- Provides clear navigation to current professional presence
-- Promotes ongoing freelance services
-- Maintains high standards for performance, accessibility, and SEO
-- Demonstrates modern web development best practices
+**Live Site**: [gauntletdesigns.com](https://gauntletdesigns.com)
+
+## What It Does
+
+This site acts as a professional goodbye page. It thanks past clients, links to my current work, and keeps the business closure clear and respectful. I wanted something simple that loads fast and looks good on any device.
 
 ## Tech Stack
 
-![Vue.js](https://img.shields.io/badge/Vue_3-4FC08D?style=flat&logo=vue.js&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite_7-646CFF?style=flat&logo=vite&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/Tailwind_3.4-38B2AC?style=flat&logo=tailwind-css&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+**Frontend**: Vue 3, Vite, Tailwind CSS, CSS Custom Properties  
+**Deployment**: Vercel with custom deployment scripts  
+**Icons**: Heroicons
 
-- **Vue 3** - Modern composition API with `<script setup>`
-- **Vite** - Lightning-fast build tool and dev server
-- **Tailwind CSS** - Utility-first CSS framework
-- **CSS Custom Properties** - Theme system with light/dark mode
-- **Heroicons** - Beautiful SVG icons
-- **Responsive Design** - Mobile-first approach
-
-## Project Structure
-
-```
-gauntlet-designs-vue/
-├── public/
-│   ├── .well-known/              # Well-known URIs for web standards
-│   ├── favicon.svg               # Site favicon
-│   ├── manifest.json             # Web app manifest
-│   ├── robots.txt                # Search engine crawler instructions
-│   └── sitemap.xml               # Site map for SEO
-├── src/
-│   ├── components/
-│   │   ├── layout/
-│   │   │   ├── AppHeader.vue     # Navigation and branding
-│   │   │   └── AppFooter.vue     # Footer with copyright
-│   │   ├── FloatingThemeToggle.vue # Theme switcher button
-│   │   └── MainContent.vue       # Hero section and main content
-│   ├── composables/
-│   │   └── useTheme.js           # Theme management composable
-│   ├── App.vue                   # Root component with layout
-│   ├── index.css                 # Component styles with Tailwind
-│   ├── main.js                   # Application entry point
-│   └── theme.css                 # CSS custom properties for theming
-├── deploy.sh                     # Deployment script
-├── index.html                    # Main HTML template
-├── jsconfig.json                 # JavaScript configuration
-├── package.json                  # Project dependencies and scripts
-├── postcss.config.js             # PostCSS configuration
-├── tailwind.config.js            # Tailwind CSS configuration
-├── vercel.json                   # Vercel deployment configuration
-└── vite.config.js                # Vite build tool configuration
-```
-
-## Development
-
-### Quick Start
+## Quick Start
 
 ```bash
-# Clone the repository
-git clone https://github.com/gauntletdesigns/gauntlet-designs-vue.git
+git clone https://github.com/aftongauntlett/gauntlet-designs-vue.git
 cd gauntlet-designs-vue
-
-# Install dependencies
 npm install
 
-# Start development server
 npm run dev
-
-# Build for production
-npm run build
-
-# Preview production build
-npm run preview
 ```
+
+The site runs on `http://localhost:5173`.
 
 ## Deployment
 
-⚠️ **Important**: This repository syncs to the production repository for Vercel deployment.
-
-### Development vs Production Repositories
-
-- **Development repo**: `aftongauntlett/gauntlet-designs-vue` (this repo)
-- **Production repo**: `gauntletdesigns/gauntlet-designs-vue` (Vercel watches this)
-
-### Deployment Methods
-
-#### Option 1: Manual Deployment (Recommended)
+This repo syncs to a production repository that Vercel watches.
 
 ```bash
-# Deploy current main branch to production
+# Deploy to production
 npm run deploy
-
-# Check deployment status
-npm run deploy:check
 ```
 
-#### Option 2: Using the Script Directly
-
-```bash
-# Make sure you're on main branch with committed changes
-./deploy-production.sh
-```
-
-#### Option 3: Automatic via GitHub Actions (Optional)
-
-- **Setup required**: Add `PRODUCTION_REPO_TOKEN` secret in GitHub repository settings
-- **Once configured**: Pushes to `main` branch automatically sync to production repo
-- **Current status**: Manual deployment recommended (working perfectly)
-
-### Important Notes
-
-1. **Only deploy from main branch** - The script prevents accidental deployments from feature branches
-2. **Commit changes first** - Uncommitted changes will prevent deployment
-3. **Production updates** - Vercel only deploys when the `gauntletdesigns` org repo is updated
-4. **Branch merges** - When PRs are merged to main, run `npm run deploy` to update production
-
-### Vercel Configuration
-
-The site deploys automatically to Vercel when the production repository is updated:
-
-- **Build command**: `npm run build`
-- **Output directory**: `dist`
-- **Framework**: Vite
-- **Live URL**: https://gauntletdesigns.com
+The deploy script checks that you're on the main branch and that all changes are committed before pushing to the production repo.
 
 ## License
 
-MIT License - Feel free to explore, learn from, and adapt the code for educational purposes.
+MIT License
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ---
 
-Built with ✨ by [Afton Gauntlett](https://github.com/aftongauntlett) • Frontend Engineer specializing in UI/UX and Accessibility
+Built by [Afton Gauntlett](https://www.aftongauntlett.com/)
